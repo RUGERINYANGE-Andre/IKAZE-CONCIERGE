@@ -443,7 +443,7 @@ const About = () => {
                 ))}
               </div>
 
-              {/* 4-image thumbnail row */}
+              4-image thumbnail row
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 6, marginTop: '2.5rem' }}>
                 {[IMAGES.market, IMAGES.hills, IMAGES.business, IMAGES.dusk].map((src, i) => (
                   <div key={i} className="thumb" style={{ height: 80 }}>

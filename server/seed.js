@@ -29,13 +29,14 @@ const seedDatabase = async () => {
     const adminPassword = 'Admin123!';
     const hashedPassword = await bcrypt.hash(adminPassword, 10);
     
-    const admin = await User.create({
-      name: 'Admin User',
-      email: 'admin@ikazeconcierge.com',
-      phone: '+250789765744',
-      password: hashedPassword,
-      role: 'admin',
-    });
+    // seed.js — just pass the plain password
+const admin = await User.create({
+  name: 'Admin User',
+  email: 'admin@ikazeconcierge.com',
+  phone: '+250789765744',
+  password: 'Admin123!',   // ← plain text; the pre-save hook will hash it
+  role: 'admin',
+});
     console.log('✅ Admin user created');
     console.log(`   Email: ${admin.email}`);
     console.log(`   Password: ${adminPassword}`);

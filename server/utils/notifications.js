@@ -52,7 +52,7 @@ const sendAllNotifications = async (order) => {
  * @param {String} note - Optional note
  */
 const sendStatusUpdateNotification = async (order, newStatus, note) => {
-  const transporter = require('../config/email');
+  const transporter = require('../utils/email');
 
   const statusEmoji = {
     pending: '⏳',
