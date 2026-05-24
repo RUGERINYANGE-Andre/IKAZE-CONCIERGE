@@ -14,7 +14,7 @@ const { protect } = require('../middleware/auth');
 // ─── Register Routes ───────────────────────────────────────
 router.post('/register/client', registerClient);  // POST /api/auth/register/client
 router.post('/register/admin', registerAdmin);    // POST /api/auth/register/admin
-router.post('/register', registerClient);         // POST /api/auth/register (old route)
+// router.post('/register', registerClient);         // POST /api/auth/register (old route)
 
 // ─── Login Routes ──────────────────────────────────────────
 router.post('/login/client', loginClient);        // POST /api/auth/login/client
